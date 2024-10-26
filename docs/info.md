@@ -9,12 +9,19 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+A one-trick pony is someone or something that is good at doing only one thing. Accordingly, a one-sprite pony can display only one sprite, and that's exactly what this design does:
+
+This Verilog design produces SVGA 800x600 60Hz output with a background and one sprite. Internally, the resolution is reduced to 100x75, thus one pixel of the sprite is actually 8x8 pixels.
+The design operates at a 40 MHz pixel clock.
+
+The sprite is 12x12 pixel in size and is initialized at startup with a pixelated version of the Tiny Tapeout logo.
+
+An SPI receiver accepts various commands, e.g. to replace the sprite data, change the colors or set the background.
 
 ## How to test
 
-Explain how to use your project
+Connect a Tiny VGA to the output Pmod connector. By default, you should see the TinyTapeout logo moving around the screen. By sending commands over SPI via the bidirectional Pmod you can change the sprite and the background, set the sprite position and much more. See the longer documentation for all commands.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+[Tiny VGA Pmod](https://github.com/mole99/tiny-vga)
