@@ -14,7 +14,7 @@ jobs:
           submodules: recursive
 
       - name: Build GDS
-        uses: TinyTapeout/tt-gds-action/orfs@tt09
+        uses: mole99/tt-gds-action/orfs@main
 
   #precheck:
   #  needs: gds
