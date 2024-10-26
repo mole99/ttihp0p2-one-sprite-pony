@@ -5,7 +5,15 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = project.v
+PROJECT_SOURCES = tt_um_top_mole99.sv \
+  top.sv \
+  sprite_access.sv \
+  sprite_data.sv \
+  sprite_movement.sv \
+  background.sv \
+  timing.sv \
+  synchronizer.sv \
+  spi_receiver.sv
 
 ifneq ($(GATES),yes)
 
